@@ -1,0 +1,19 @@
+/** @jsx React.DOM */
+
+var React = require('react');
+var {{exposedComponent}} = require('../../lib/index');
+
+var appElement = document.getElementById('example');
+
+var App = React.createClass({
+
+  render: function() {
+    return (
+      <div>
+        <{{exposedComponent}} />
+      </div>
+    );
+  }
+});
+
+React.renderComponent(<App/>, appElement);

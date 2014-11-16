@@ -1,0 +1,16 @@
+{
+  "name": "originate-react-component",
+  "version": "0.1.0",
+  "description": "loom origin for creating distributable react components",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "~3.2.7",
+    "loom": "~3.x.x",
+    "prompt": "^0.2.14",
+    "title-case": "^1.0.1"
+  }
+}
