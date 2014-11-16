@@ -2,10 +2,18 @@
   "name": "originate-react-component",
   "version": "0.1.0",
   "description": "loom origin for creating distributable react components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knomedia/originate-react-component"
+  },
+  "homepage": "https://github.com/knomedia/originate-react-component",
+  "bugs": "https://github.com/knomedia/originate-react-component/issues",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "authors": [
+    "Jason Madsen"
+  ],
   "license": "MIT",
   "dependencies": {
     "glob": "~3.2.7",
