@@ -12,7 +12,7 @@ $ npm install -g loom
 $ originate react-component my-component
 $ cd my-project
 $ npm install
-# make all script/* files executable
+# make all script # files executable
 $ npm start #visit localhost:8080
 $ npm test
 ```
