@@ -1,5 +1,6 @@
 var glob = require('glob');
 var buildFriendlyName = require('../../lib/friendlyName');
+var formatPromptArray = require('../../lib/formatPromptArray');
 var prompt = require('prompt');
 prompt.message = "[?]".magenta;
 
@@ -24,8 +25,8 @@ exports.before = function(next, env) {
     env.description = result.description;
     env.homepage = result.githubUrl;
     env.reactVersion = result.reactVersion;
-    env.authors =  getPotentialArrayValues(result.authors);
-    env.keywords = getPotentialArrayValues(result.keywords);
+    env.authors =  formatPromptArray(result.authors);
+    env.keywords = formatPromptArray(result.keywords);
     env.exposedComponent = result.exposedComponent;
     next();
   });
@@ -72,23 +73,4 @@ function getAllTemplates() {
   var templates = glob.sync(__dirname+'/../templates/**/*.hbs');
   templates = templates.concat(glob.sync(__dirname+'/../templates/**/\.*.hbs'));
   return templates;
-}
-
-// format array as a list of strings
-function arrayToFmtString(array) {
-  var results = '';
-  array.forEach(function(item, index){
-    results += '"' + item + '"';
-    if (index < array.length - 1) {
-      results += ', ';
-    }
-  });
-  return results;
-}
-
-function getPotentialArrayValues(results) {
-  if (!(typeof results === 'string')) {
-    results = arrayToFmtString(results);
-  }
-  return results;
 }
