@@ -1,6 +1,6 @@
 {
   "name": "originate-react-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "loom origin for creating distributable react components",
   "repository": {
     "type": "git",
