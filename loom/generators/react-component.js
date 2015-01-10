@@ -18,13 +18,14 @@ exports.before = function(next, env) {
       exposedComponent: {description: 'initial component', default: 'Example'}
     }
   };
+
   prompt.get(schema, function(err, result){
     env.name = result.name;
     env.description = result.description;
     env.homepage = result.githubUrl;
-    env.authors = arrayToFmtString(result.authors);
     env.reactVersion = result.reactVersion;
-    env.keywords = arrayToFmtString(result.keywords);
+    env.authors =  getPotentialArrayValues(result.authors);
+    env.keywords = getPotentialArrayValues(result.keywords);
     env.exposedComponent = result.exposedComponent;
     next();
   });
@@ -82,5 +83,12 @@ function arrayToFmtString(array) {
       results += ', ';
     }
   });
+  return results;
+}
+
+function getPotentialArrayValues(results) {
+  if (!(typeof results === 'string')) {
+    results = arrayToFmtString(results);
+  }
   return results;
 }
