@@ -14,7 +14,7 @@ exports.before = function(next, env) {
       githubUrl: {description: 'github url'},
       authors: {type: 'array'},
       keywords: {type: 'array'},
-      reactVersion: {default: '>=0.11.0'},
+      reactVersion: {default: '>=0.12.0'},
       exposedComponent: {description: 'initial component', default: 'Example'}
     }
   };

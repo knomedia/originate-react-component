@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var {{exposedComponent}} = require('../../lib/index');
+var {{exposedComponent}} = React.createFactory(require('../../lib/index'));
 
 var appElement = document.getElementById('example');
 
@@ -16,4 +16,5 @@ var App = React.createClass({
   }
 });
 
-React.renderComponent(<App/>, appElement);
+var Application = React.createFactory(App);
+React.render(<Application />, appElement);
