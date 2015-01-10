@@ -9,7 +9,7 @@
   "homepage": "https://github.com/knomedia/originate-react-component",
   "bugs": "https://github.com/knomedia/originate-react-component/issues",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test node_modules/.bin/karma start --browsers Firefox --single-run"
   },
   "authors": [
     "Jason Madsen"
@@ -20,5 +20,18 @@
     "loom": "~3.x.x",
     "prompt": "^0.2.14",
     "title-case": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "4.2.3",
+    "browserify-shim": "3.6.0",
+    "mocha": "1.20.1",
+    "envify": "1.2.0",
+    "expect": "0.1.1",
+    "karma": "0.12.16",
+    "karma-browserify": "^0.2.1",
+    "karma-chrome-launcher": "0.1.4",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "0.1.3",
+    "karma-mocha": "0.1.3"
   }
 }

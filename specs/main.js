@@ -1,0 +1,1 @@
+require('./friendlyName.spec.js');

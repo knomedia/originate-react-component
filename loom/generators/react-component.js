@@ -1,5 +1,5 @@
 var glob = require('glob');
-var titleCase = require('title-case');
+var buildFriendlyName = require('../../lib/friendlyName');
 var prompt = require('prompt');
 prompt.message = "[?]".magenta;
 
@@ -15,7 +15,7 @@ exports.before = function(next, env) {
       authors: {type: 'array'},
       keywords: {type: 'array'},
       reactVersion: {default: '>=0.12.0'},
-      exposedComponent: {description: 'initial component', default: 'Example'}
+      exposedComponent: {description: 'initial component', default: buildFriendlyName(env.args[0])}
     }
   };
 
@@ -41,7 +41,7 @@ exports.present = function(next, env) {
     reactVersion: env.reactVersion,
     keywords: env.keywords,
     exposedComponent: env.exposedComponent,
-    friendlyName: titleCase(env.name.replace('-', ' ')).replace(/\s/, '')
+    friendlyName: buildFriendlyName(env.name)
   })
 };
 
