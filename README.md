@@ -1,10 +1,8 @@
-originate-react-component
-=========================
+# originate-react-component
 
-[loom][1] origin for creating distributable react components
+[loom][1] origin for creating distributable react components. Sets up a distributable (npm, bower) react component, with tests and examples.
 
-Usage
------
+## Usage
 
 ```sh
 $ npm install -g loom
@@ -17,5 +15,28 @@ $ npm start #visit localhost:8080
 $ npm test
 ```
 
-  [1]:https://github.com/rpflorence/loom
 
+## Local Developement
+
+```sh
+$ git clone git@github.com:knomedia/originate-react-component.git
+$ cd originate-react-component
+$ npm install
+$ npm link
+
+$ cd ..
+$ npm link originate-react-component
+
+# now you can use it with:
+$ originate react-component my-component
+```
+
+
+## Licences and Copywright
+
+MIT Style licence
+(c) 2014 Jason Madsen
+
+
+
+  [1]:https://github.com/rpflorence/loom
