@@ -8,11 +8,18 @@
 $ npm install -g loom
 # now the originate program is available
 $ originate react-component my-component
+
 $ cd my-project
 $ npm install
-# make all script # files executable
-$ npm start #visit localhost:8080
+
+# make all build script files executable
+$ for f in scripts/*; do chmod a+x $f; done;
+
+#run local specs
 $ npm test
+
+$ npm start
+#visit localhost:8080
 ```
 
 
@@ -27,7 +34,7 @@ $ npm link
 $ cd ..
 $ npm link originate-react-component
 
-# now you can use it with:
+# now you can use the local repo version with:
 $ originate react-component my-component
 ```
 
