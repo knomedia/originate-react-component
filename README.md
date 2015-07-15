@@ -9,11 +9,8 @@ $ npm install -g loom
 # now the originate program is available
 $ originate react-component my-component
 
-$ cd my-project
+$ cd my-component
 $ npm install
-
-# make all build script files executable
-$ for f in scripts/*; do chmod a+x $f; done;
 
 #run local specs
 $ npm test
@@ -21,7 +18,6 @@ $ npm test
 $ npm start
 #visit localhost:8080
 ```
-
 
 ## Local Developement
 
@@ -38,12 +34,9 @@ $ npm link originate-react-component
 $ originate react-component my-component
 ```
 
-
-## Licences and Copywright
+## Licences and Copyright
 
 MIT Style licence
 (c) 2014 Jason Madsen
 
-
-
-  [1]:https://github.com/rpflorence/loom
+[1]:https://github.com/rpflorence/loom

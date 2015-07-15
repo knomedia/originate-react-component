@@ -10,7 +10,13 @@ describe('formatPromptArray', function() {
 
   it('returns a string listing for an array of strings', function() {
     var results = formatPromptArray(['James', 'Fred', 'Maceo']);
-    expected = '"James", "Fred", "Maceo"';
+    var expected = '"James", "Fred", "Maceo"';
+    assert.equal(results, expected);
+  });
+
+  it('trims white space on array items', function() {
+    var results = formatPromptArray([' Foo', 'Bar ', ' Baz ']);
+    expected = '"Foo", "Bar", "Baz"';
     assert.equal(results, expected);
   });
 

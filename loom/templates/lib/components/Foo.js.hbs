@@ -1,10 +1,9 @@
-/** @jsx React.DOM */
+import React from 'react';
 
-var React = require('react');
+export default React.createClass({
+  displayName: '{{exposedComponent}}',
 
-var {{exposedComponent}} = module.exports = React.createClass({
-
-  render: function() {
+  render() {
     return (
       <div>
         {{exposedComponent}}

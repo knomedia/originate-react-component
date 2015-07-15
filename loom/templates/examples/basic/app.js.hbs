@@ -1,20 +1,15 @@
-/** @jsx React.DOM */
+import React, {Component} from 'react';
+import {{exposedComponent}} from '../../lib/main';
 
-var React = require('react');
-var {{exposedComponent}} = React.createFactory(require('../../lib/index'));
-
-var appElement = document.getElementById('example');
-
-var App = React.createClass({
-
-  render: function() {
+class App extends Component {
+  render() {
     return (
-      <div>
-        <{{exposedComponent}} />
+      <div className="example">
+        <h1>{{name}}</h1>
+        <{{exposedComponent}}/>
       </div>
     );
   }
-});
+}
 
-var Application = React.createFactory(App);
-React.render(<Application />, appElement);
+React.render(<App/>, document.getElementById('container'));
