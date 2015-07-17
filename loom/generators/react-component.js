@@ -28,7 +28,6 @@ exports.before = function(next, env) {
     env.description = result.description;
     env.homepage = result.githubUrl;
     env.reactVersion = result.reactVersion;
-    env.author = result.author;
     env.authors = formatPromptArray(result.authors.split(','));
     env.keywords = formatPromptArray(result.keywords.split(','));
     // env.authors =  formatPromptArray(result.authors);
