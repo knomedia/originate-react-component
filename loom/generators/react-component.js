@@ -24,7 +24,6 @@ exports.before = function(next, env) {
   };
 
   prompt.get(schema, function(err, result) {
-    console.log(result);
     env.name = result.name;
     env.description = result.description;
     env.homepage = result.githubUrl;
