@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {{exposedComponent}} from '../../lib/main';
 
-class App extends Component {
+var App = React.createClass({
   render() {
     return (
       <div className="example">
@@ -10,6 +10,6 @@ class App extends Component {
       </div>
     );
   }
-}
+});
 
 React.render(<App/>, document.getElementById('container'));
